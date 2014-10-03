@@ -1,0 +1,25 @@
+#!/bin/sh
+yum erase mapr-hive
+yum erase mapr-metrics
+yum erase mapr-flume
+yum erase mapr-webserver
+yum erase mapr-fileserver
+yum erase mapr-zookeeper
+yum erase mapr-hbase-internal
+yum erase mapr-mahout
+yum erase mapr-cascading
+yum erase mapr-cldb
+yum erase mapr-core
+yum erase mapr-zk-internal
+yum erase mapr-tasktracker
+yum erase mapr-oozie
+yum erase mapr-sqoop
+yum erase mapr-pig
+yum erase mapr-hbase-regionserver
+yum erase mapr-whirr
+yum erase mapr-nfs
+yum erase mapr-oozie-internal
+yum erase mapr-hbase-internal
+yum erase mapr-core
+yum erase mapr-hbase-master
+yum erase mapr-jobtracker
