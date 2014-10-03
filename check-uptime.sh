@@ -1,3 +1,3 @@
 #!/bin/sh
-pssh -i -h hostpssh uptime
+clush -a uptime
 
