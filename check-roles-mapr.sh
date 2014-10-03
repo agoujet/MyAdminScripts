@@ -1,7 +1,11 @@
 #!/bin/sh
-echo "#####  View from the folder /opt/mapr/roles #####
+echo "##################################################"
+echo "#####  View from the folder /opt/mapr/roles  #####"
+echo "##################################################"
 clush -ab ls /opt/mapr/roles
-echo #####  View form the maprcli command #####
+echo "##################################################"
+echo "#########  View form the maprcli command  ########"
+echo "##################################################"
 maprcli node list -columns csvc
 
 
