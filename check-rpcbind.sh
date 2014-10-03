@@ -1,5 +1,5 @@
 #!/bin/sh
-pssh -i -h hostpssh "ps x | grep rpcbind"
+clush -a ps x | grep rpcbind
 
 
 
