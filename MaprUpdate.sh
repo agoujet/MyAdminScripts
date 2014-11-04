@@ -1,14 +1,14 @@
 #!/bin/sh
-/etc/init.d/mapr-warden stop
-/etc/init.d/mapr-zookeeper stop
-sleep 15
-rm -Rf update.local.list
-rpm -qa | grep mapr | gawk -F- '{ print $1 "-" $2 "* "}'  >> "update.local.list" 
-list=$(awk 'END{print RS}$0=_[$2]++||NR==1?$0:RS$0' ORS= update.local.list) 
-rm -Rf update.local.list
-yum -y update $list
-sleep 5
-/etc/init.d/mapr-warden start 
-sleep 90
-maprcli config save -values {"cldb.v3.features.enabled":"1"}
-maprcli config save -values {mapr.targetversion:"`cat /opt/mapr/MapRBuildVersion`"}
+clush -a /etc/init.d/mapr-warden stop
+clush -a /etc/init.d/mapr-zookeeper stop
+clush -a sleep 15
+clush -a rm -Rf update.local.list
+clush -a rpm -qa | grep mapr | gawk -F- '{ print $1 "-" $2 "* "}'  >> "update.local.list" 
+clush -a list=$(awk 'END{print RS}$0=_[$2]++||NR==1?$0:RS$0' ORS= update.local.list) 
+clush -a rm -Rf update.local.list
+clush -a yum -y update $list
+clush -a sleep 5
+clush -a /etc/init.d/mapr-warden start 
+clush -a sleep 90
+clush -a maprcli config save -values {"cldb.v3.features.enabled":"1"}
+clush -a maprcli config save -values {mapr.targetversion:"`cat /opt/mapr/MapRBuildVersion`"}
