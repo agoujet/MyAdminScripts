@@ -1,5 +1,5 @@
 #!/bin/sh
-pssh -i -h hostpssh  mount localhost:/mapr /mapr/
+clush -a mount localhost:/mapr /mapr/
 
 
 
